@@ -1,12 +1,11 @@
 name: MSVC-CI
-on:
-  push:
-    branches: [master]
-  pull_request:
+on: [push]
+
 
 jobs:
-  build:
+  workflow_dispatch:
     runs-on: windows-latest
+        
     steps:
       - uses: actions/checkout@v2
       - name: Configure and Build
